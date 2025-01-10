@@ -89,19 +89,18 @@
 }
 
 .shop__card__purchase{
-    margin-top: 40px;
-    background-color: var(--backgroundMain);
-    color: var(--colorMain);
-    font-weight: 600;
-    font-size: 14px;
-    padding: 20px 25px;
-    width: 200px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: .3s;
-    border-radius: 5px;
-
+        margin-top: 40px;
+        background-color: var(--backgroundMain); /* Use your custom background color */
+        color: var(--colorMain); /* Use your custom text color */
+        font-weight: 600;
+        font-size: 14px;
+        padding: 20px 25px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: .3s;
+        border-radius: 5px;
 }
 
 .shop__card__purchase:hover{
