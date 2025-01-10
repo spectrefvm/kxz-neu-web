@@ -89,23 +89,28 @@
 }
 
 .shop__card__purchase{
-        margin-top: 40px;
-        background-color: var(--backgroundMain); /* Use your custom background color */
-        color: var(--colorMain); /* Use your custom text color */
-        font-weight: 600;
-        font-size: 14px;
-        padding: 20px 25px;
-        width: 200px;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        transition: .3s;
-        border-radius: 5px;
+    margin-top: 40px;
+    background-color: var(--backgroundMain); /* Keeping your custom background color */
+    color: var(--colorMain); /* Keeping your custom text color */
+    font-weight: 600;
+    font-size: 14px;
+    padding: 18px 25px; /* Adjusted padding for better balance */
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth background and transform transitions */
 }
 
 .shop__card__purchase:hover{
-    opacity: 0.7;
-    transition: .3s;
+    background-color: var(--hoverBackgroundColor, #005bb5); /* Customizable hover color with fallback */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.shop__card__purchase:active {
+    transform: scale(0.98); /* Add active state for button press effect */
 }
 
 .shop__card__icon{
