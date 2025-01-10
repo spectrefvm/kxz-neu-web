@@ -89,18 +89,16 @@
 }
 
 .shop__card__purchase{
-    margin-top: 40px;
-    background-color: var(--backgroundMain);
-    color: var(--colorMain);
-    font-weight: 600;
-    font-size: 14px;
-    padding: 20px 25px;
-    width: 200px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: .3s;
-    border-radius: 5px;
+        background-color: #0070ff; /* Button background color */
+        color: white; /* Text color */
+        padding: 10px 20px; /* Padding for button */
+        border: none; /* Remove default border */
+        border-radius: 5px; /* Rounded corners */
+        display: inline-flex; /* Align icon and text properly */
+        align-items: center; /* Center the icon and text vertically */
+        font-size: 16px; /* Font size */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
 
 }
 
