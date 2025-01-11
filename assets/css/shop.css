@@ -90,6 +90,7 @@
 
 .shop__card__purchase{
     margin-top: 40px;
+    margin-left: 10px;
     background-color: var(--backgroundMain); /* Keeping your custom background color */
     color: var(--colorMain); /* Keeping your custom text color */
     font-weight: 600;
@@ -114,7 +115,7 @@
 }
 
 .shop__card__icon {
-    margin-right: 20px; /* Space between the icon and text */
+    margin-right: 10px; /* Space between the icon and text */
     width: 16px; /* Icon size adjustment for consistency */
     height: auto; /* Keep the aspect ratio of the icon intact */
 }
