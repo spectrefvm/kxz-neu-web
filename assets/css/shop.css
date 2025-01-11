@@ -106,8 +106,7 @@
 }
 
 .shop__card__purchase:hover{
-    opacity: 0.7;
-    transition: .3s;
+    background-color: var(--hoverBackgroundColor, #005bb5); /* Customizable hover color with fallback */
     transform: scale(1.05); /* Slight zoom effect on hover */
 
 .shop__card__purchase:active {
