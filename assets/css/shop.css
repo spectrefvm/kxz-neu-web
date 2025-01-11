@@ -57,8 +57,9 @@
 }
 
 .shop__icon{
-    width: 70px;
-    max-width: 100%;
+    margin-right: 10px; /* Space between the icon and text */
+    width: 16px; /* Icon size adjustment for consistency */
+    height: auto; /* Keep the aspect ratio of the icon intact */
 }
 
 
