@@ -107,6 +107,7 @@
 .shop__card__purchase:hover{
     opacity: 0.7;
     transition: .3s;
+    transform: scale(1.05); /* Slight zoom effect on hover */
 
 .shop__card__purchase:active {
     transform: scale(0.98); /* Add active state for button press effect */
