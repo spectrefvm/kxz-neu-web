@@ -90,36 +90,30 @@
 
 .shop__card__purchase{
     margin-top: 40px;
-    background-color: var(--backgroundMain); /* Keeping your custom background color */
-    color: var(--colorMain); /* Keeping your custom text color */
+    background-color: var(--backgroundMain);
+    color: var(--colorMain);
     font-weight: 600;
     font-size: 14px;
-    padding: 18px 25px; /* Adjusted padding for better balance */
+    padding: 20px 25px;
     width: 200px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Center content horizontally */
     cursor: pointer;
-    border: none; /* Remove the default button border */
+    transition: .3s;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth background and transform transitions */
+
 }
 
 .shop__card__purchase:hover{
-    background-color: var(--hoverBackgroundColor, #005bb5); /* Customizable hover color with fallback */
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    opacity: 0.7;
+    transition: .3s;
+}
 
-.shop__card__purchase:active {
-    transform: scale(0.98); /* Add active state for button press effect */
+.shop__card__icon{
+    margin-right: 17px;
+    width: 20px;
 }
-    
-.shop__card__icon {
-    margin-right: 10px; /* Space between the icon and text */
-    width: 16px; /* Icon size adjustment for consistency */
-    height: auto; /* Keep the aspect ratio of the icon intact */
-    transition: transform 0.3s ease; /* Ensure icon stays in place during hover */
-}
-    
+
 @media only screen and (max-width: 1100px) {
     .section__shop{
         padding: 50px 5% 80px;
