@@ -109,6 +109,10 @@
     background-color: var(--hoverBackgroundColor, #005bb5); /* Customizable hover color with fallback */
     transform: scale(1.05); /* Slight zoom effect on hover */
 
+.shop__card__purchase:active {
+    transform: scale(0.98); /* Add active state for button press effect */
+}
+    
 .shop__card__icon {
     margin-right: 10px; /* Space between the icon and text */
     width: 16px; /* Icon size adjustment for consistency */
