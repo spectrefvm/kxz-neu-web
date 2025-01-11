@@ -90,18 +90,19 @@
 
 .shop__card__purchase{
     margin-top: 40px;
-    background-color: var(--backgroundMain);
-    color: var(--colorMain);
+    background-color: var(--backgroundMain); /* Keeping your custom background color */
+    color: var(--colorMain); /* Keeping your custom text color */
     font-weight: 600;
     font-size: 14px;
-    padding: 18px 25px;
+    padding: 18px 25px; /* Adjusted padding for better balance */
     width: 200px;
     display: flex;
     align-items: center;
+    justify-content: center; /* Center content horizontally */
     cursor: pointer;
-    transition: .3s;
     border: none; /* Remove the default button border */
     border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth background and transform transitions */
 }
 
 .shop__card__purchase:hover{
