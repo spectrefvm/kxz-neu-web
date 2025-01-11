@@ -117,6 +117,7 @@
     margin-right: 10px; /* Space between the icon and text */
     width: 16px; /* Icon size adjustment for consistency */
     height: auto; /* Keep the aspect ratio of the icon intact */
+    transition: transform 0.3s ease; /* Ensure icon stays in place during hover */
 }
     
 @media only screen and (max-width: 1100px) {
