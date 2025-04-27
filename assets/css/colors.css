@@ -4,7 +4,7 @@
 :root {
     --backgroundMain: rgb(13,13,13);
     --backgroundSecond: rgb(23,23,23);
-    --colorMain: #7B86FF; // OLD DB00E5
+    --colorMain: #7800d2; /* OLD COLOR DB00E5 and #7B86FF */
     --circleColor: #FFFFFF26;
     --colorText: #949494;
     --colorDefault: #fff;
