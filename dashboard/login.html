@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/login/styles@0.0.4.css">
+
+    
+</head>
+<body>
+    <div class="glow"></div>
+    
+    <div class="login-container">
+        <div class="login-header">
+            <h1 class="login-title">LOGIN</h1>
+            <p class="login-subtitle">Welcome back</p>
+        </div>
+        
+        <form id="loginForm">
+            <div class="form-group">
+                <input type="text" id="loginUsername" class="form-input" placeholder="Username" required>
+                <svg class="form-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </div>
+            
+            <div class="form-group">
+                <input type="password" id="loginPassword" class="form-input" placeholder="Password" required>
+                <svg class="form-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+            </div>
+            
+            <button type="button" onclick="login()" class="login-button">Login</button>
+            <div id="errorMessage" class="error-message"></div>
+        </form>
+        
+        <div class="login-footer">
+            Don't have an account? <a href="register" class="login-link">Register</a>
+        </div>
+    </div>
+
+    <script>
+
+document.addEventListener('DOMContentLoaded', async function() {
+    try {
+        const response = await fetch('https://bebetter-fivem.space/api/getUserData', {
+            credentials: 'include'
+        });
+
+        if (response.ok) {
+         
+            window.location.href = 'dashboard';
+        }
+    } catch (error) {
+        console.error('Error checking auth status:', error);
+    }
+});
+
+
+        document.addEventListener('mousemove', (e) => {
+            const glow = document.querySelector('.glow');
+            const x = e.clientX;
+            const y = e.clientY;
+            
+            glow.style.left = `${x - 250}px`;
+            glow.style.top = `${y - 250}px`;
+        });
+
+        async function login() {
+            const username = document.getElementById('loginUsername').value;
+            const password = document.getElementById('loginPassword').value;
+            const errorMessage = document.getElementById('errorMessage');
+            const loginButton = document.querySelector('.login-button');
+
+            loginButton.textContent = 'Logging in...';
+            loginButton.disabled = true;
+
+            try {
+                const response = await fetch('https://bebetter-fivem.space/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password }),
+                    credentials: 'include'
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    window.location.href = 'dashboard';
+                } else {
+                    errorMessage.textContent = data.message || "Login failed";
+                    loginButton.textContent = 'Login';
+                    loginButton.disabled = false;
+                }
+            } catch (error) {
+                errorMessage.textContent = "An error occurred. Please try again.";
+                loginButton.textContent = 'Login';
+                loginButton.disabled = false;
+            }
+        }
+
+
+        document.getElementById('loginForm').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                login();
+            }
+        });
+    </script>
+</body>
+</html>
