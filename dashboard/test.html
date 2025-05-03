@@ -1,49 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KXZ Project - Dashboard</title>
-  <link rel="icon" type="image/png" href="https://kxz-project.netlify.app/assets/img/logo.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles/dashboard/styles@0.0.3.css">
-  <link rel="stylesheet" href="styles/dashboard/second_styles@0.0.3.css">
+  <link rel="icon" type="image/png" href="https://kxz-project.netlify.app/assets/img/logo.png"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <script src="js/dashboard/scripts@1-1-4.js"></script>
-  <style>
-    /* Showcase Section Styles */
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-    .video-card {
-      background-color: #1e1e2f;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-      transition: transform 0.2s;
-    }
-    .video-card:hover {
-      transform: scale(1.02);
-    }
-    .video-card iframe {
-      width: 100%;
-      height: 180px;
-      border: none;
-    }
-    .video-card h3 {
-      margin: 10px;
-      font-size: 1.1rem;
-      color: #fff;
-    }
-  </style>
+  <link rel="stylesheet" href="styles/dashboard/styles@0.0.3.css"/>
+  <link rel="stylesheet" href="styles/dashboard/second_styles@0.0.3.css"/>
 </head>
 <body>
-
   <nav class="top-nav">
     <a href="" class="logo">KXZ PROJECT</a>
-    
     <div class="nav-items">
       <a href="#" class="nav-item active" data-page="dashboard" data-tooltip="Dashboard">
         <i class="fas fa-th-large"></i>
@@ -58,7 +27,6 @@
         <i class="fas fa-user-shield"></i>
       </a>
     </div>
-    
     <div class="user-profile">
       <button class="logout-btn" onclick="window.location.href='https://kxz-project.netlify.app'" title="Logout">
         <i class="fas fa-sign-out-alt"></i>
@@ -67,30 +35,33 @@
   </nav>
 
   <main class="main-content">
-
-    <!-- Existing Sections: Dashboard, Settings, Admin -->
-    <!-- ... (Your existing sections remain unchanged) ... -->
+    <!-- Existing sections: dashboard, settings, admin -->
 
     <!-- Showcase Section -->
     <section id="showcase" class="page-section">
       <div class="header">
         <h1 class="welcome-text">Video <span>Showcase</span></h1>
       </div>
-      <div class="video-grid">
-        <!-- Video Card 1 -->
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
-          <h3>Video Title 1</h3>
+      <div class="card" style="--animation-order: 1">
+        <div class="card-header">
+          <h2 class="card-title"><i class="fas fa-film"></i> Featured Videos</h2>
+          <p class="card-description">Watch our latest YouTube videos directly here.</p>
         </div>
-        <!-- Video Card 2 -->
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
-          <h3>Video Title 2</h3>
+        <div class="card-content">
+          <div class="video-grid">
+            <div class="video-item">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+              <p class="video-title">Video Title 1</p>
+            </div>
+            <div class="video-item">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+              <p class="video-title">Video Title 2</p>
+            </div>
+            <!-- Add more videos as needed -->
+          </div>
         </div>
-        <!-- Add more video cards as needed -->
       </div>
     </section>
-
   </main>
 
   <script>
@@ -98,26 +69,43 @@
     document.addEventListener('DOMContentLoaded', function() {
       const navItems = document.querySelectorAll('.nav-item');
       const pageSections = document.querySelectorAll('.page-section');
-      
+
       navItems.forEach(item => {
         item.addEventListener('click', function(e) {
           e.preventDefault();
-          
-          // Remove active class from all nav items
           navItems.forEach(nav => nav.classList.remove('active'));
-          
-          // Add active class to clicked nav item
           this.classList.add('active');
-          
-          // Hide all page sections
           pageSections.forEach(section => section.classList.remove('active'));
-          
-          // Show the corresponding page section
           const pageId = this.getAttribute('data-page');
           document.getElementById(pageId).classList.add('active');
         });
       });
+
+      // Add animation to cards
+      const cards = document.querySelectorAll('.card');
+      cards.forEach((card, index) => {
+        card.style.setProperty('--animation-order', index + 1);
+      });
     });
   </script>
+
+  <style>
+    /* Additional styles for the showcase section */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .video-item {
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .video-title {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
 </body>
 </html>
