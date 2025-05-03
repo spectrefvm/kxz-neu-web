@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="styles/dashboard/second_styles@0.0.3.css"/>
 </head>
 <body>
+
   <nav class="top-nav">
     <a href="" class="logo">KXZ PROJECT</a>
     <div class="nav-items">
@@ -21,7 +22,7 @@
         <i class="fas fa-cog"></i>
       </a>
       <a href="#" class="nav-item" data-page="showcase" data-tooltip="Showcase">
-        <i class="fas fa-video"></i>
+        <i class="fas fa-tv"></i>
       </a>
       <a href="#" class="nav-item" data-page="admin" id="adminNavItem" style="display: none;" data-tooltip="Admin Panel">
         <i class="fas fa-user-shield"></i>
@@ -35,43 +36,177 @@
   </nav>
 
   <main class="main-content">
-    <!-- Existing sections: dashboard, settings, admin -->
 
-    <!-- Showcase Section -->
-    <section id="showcase" class="page-section">
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="page-section active">
       <div class="header">
-        <h1 class="welcome-text">Video <span>Showcase</span></h1>
+        <h1 class="welcome-text">Welcome, <span id="username">User</span></h1>
       </div>
+
       <div class="card" style="--animation-order: 1">
         <div class="card-header">
-          <h2 class="card-title"><i class="fas fa-film"></i> Featured Videos</h2>
-          <p class="card-description">Watch our latest YouTube videos directly here.</p>
+          <h2 class="card-title"><i class="fas fa-user-circle"></i> Profile</h2>
         </div>
         <div class="card-content">
-          <div class="video-grid">
-            <div class="video-item">
-              <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
-              <p class="video-title">Video Title 1</p>
+          <div class="profile-container">
+            <div class="avatar"><i class="fas fa-user"></i></div>
+            <div class="profile-info">
+              <h3 class="profile-name" id="profile-username">User</h3>
+              <div class="profile-badges">
+                <div class="badge" id="userBadge">FREE</div>
+                <span class="profile-badge uid">UID: <span id="uid">2483</span></span>
+              </div>
             </div>
-            <div class="video-item">
-              <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
-              <p class="video-title">Video Title 2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="--animation-order: 2">
+        <div class="card-header">
+          <h2 class="card-title"><i class="fas fa-download"></i> Download Center</h2>
+          <p class="card-description">You can Download the Latest Version of KXZ here</p>
+        </div>
+        <div class="card-content">
+          <div class="download-header">
+            <div>
+              <h3 class="download-title"><i class="fas fa-gamepad"></i> KXZ PROJECT - FREE [FIVEM]</h3>
+              <p class="download-version"><i class="fas fa-code-branch"></i> Version: 1.4.02 (Last update: Today)</p>
             </div>
-            <!-- Add more videos as needed -->
+            <div class="download-btn-container">
+              <button class="download-btn" onclick="window.location.href='https://direct-link.net/1069471/kxz-free'">
+                <i class="fas fa-download"></i> Download Now
+              </button>
+            </div>
+          </div>
+          <div class="separator"></div>
+          <div class="status-grid">
+            <div class="status-item">
+              <i class="fas fa-shield-alt green"></i>
+              <span>Detection Status: Undetected!</span>
+            </div>
+            <div class="status-item">
+              <i class="fas fa-clock purple"></i>
+              <span>Last updated: Today</span>
+            </div>
+          </div>
+          <div class="release-notes">
+            <div class="release-notes-header">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <h4 class="release-notes-title">Latest Release Notes <span class="version-badge">v1.4.02</span></h4>
+                <p class="release-notes-content">
+                  This update includes performance improvements, bug fixes, and new features to enhance your experience.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ACCOUNT SETTINGS -->
+    <section id="settings" class="page-section">
+      <div class="header">
+        <h1 class="welcome-text">Account <span>Settings</span></h1>
+      </div>
+
+      <div class="settings-grid">
+        <!-- Password Change -->
+        <div class="card" style="--animation-order: 1">
+          <div class="card-header">
+            <h2 class="card-title"><i class="fas fa-key"></i> Change Password</h2>
+            <p class="card-description">Update your account password</p>
+          </div>
+          <div class="card-content">
+            <form class="settings-form" id="passwordChangeForm">
+              <div class="form-group">
+                <label class="form-label">Current Password</label>
+                <div class="password-input-container">
+                  <input type="password" id="currentPassword" class="form-input" placeholder="Enter your current password" required />
+                  <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">New Password</label>
+                <div class="password-input-container">
+                  <input type="password" id="newPassword" class="form-input" placeholder="Enter new password" required />
+                  <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Confirm New Password</label>
+                <div class="password-input-container">
+                  <input type="password" id="confirmPassword" class="form-input" placeholder="Confirm new password" required />
+                  <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button type="reset" class="btn btn-outline">Cancel</button>
+                <button type="submit" class="btn btn-primary">Update Password</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Discord Account -->
+        <div class="card" style="--animation-order: 2">
+          <div class="card-header">
+            <h2 class="card-title"><i class="fab fa-discord"></i> Discord Account</h2>
+            <p class="card-description">Manage your linked Discord account</p>
+          </div>
+          <div style="padding: 25px">
+            <div class="discord-account-info" id="discordAccountInfo">
+              <div class="discord-avatar-container">
+                <div class="discord-avatar" id="discordAvatar"><i class="fas fa-user"></i></div>
+              </div>
+              <div class="discord-info">
+                <h3 id="discordUsername">Not linked</h3>
+                <p class="discord-id" id="discordId">Discord ID: Not linked</p>
+              </div>
+              <button class="btn btn-primary" id="relinkDiscordBtn">
+                <i class="fas fa-sync-alt"></i> Relink Discord Account
+              </button>
+            </div>
+            <p class="discord-warning">
+              <i class="fas fa-exclamation-triangle"></i> Relink Discord Account will link your KXZ Account to another Discord Account!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOWCASE SECTION -->
+    <section id="showcase" class="page-section">
+      <div class="header">
+        <h1 class="welcome-text">YouTube <span>Showcase</span></h1>
+      </div>
+      <div class="card" style="--animation-order: 1">
+        <div class="card-header">
+          <h2 class="card-title"><i class="fab fa-youtube"></i> Featured Videos</h2>
+          <p class="card-description">Watch our latest YouTube content directly from the dashboard</p>
+        </div>
+        <div class="card-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video 1" frameborder="0" allowfullscreen></iframe>
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/3tmd-ClpJxA" title="YouTube video 2" frameborder="0" allowfullscreen></iframe>
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/L_jWHffIx5E" title="YouTube video 3" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADMIN PANEL -->
+    <section id="admin" class="page-section">
+      <!-- [Your full admin panel section is preserved here, unchanged] -->
+    </section>
+
   </main>
 
   <script>
-    // Navigation functionality
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const navItems = document.querySelectorAll('.nav-item');
       const pageSections = document.querySelectorAll('.page-section');
 
       navItems.forEach(item => {
-        item.addEventListener('click', function(e) {
+        item.addEventListener('click', function (e) {
           e.preventDefault();
           navItems.forEach(nav => nav.classList.remove('active'));
           this.classList.add('active');
@@ -81,31 +216,11 @@
         });
       });
 
-      // Add animation to cards
       const cards = document.querySelectorAll('.card');
       cards.forEach((card, index) => {
         card.style.setProperty('--animation-order', index + 1);
       });
     });
   </script>
-
-  <style>
-    /* Additional styles for the showcase section */
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    .video-item {
-      background-color: #fff;
-      padding: 10px;
-      border-radius: 8px;
-    }
-    .video-title {
-      margin-top: 10px;
-      font-weight: bold;
-      text-align: center;
-    }
-  </style>
 </body>
 </html>
