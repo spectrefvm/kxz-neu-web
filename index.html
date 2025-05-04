@@ -717,5 +717,22 @@
     <script src="./assets/js/animation.js"></script>
     <script src="snow.js"></script>
 
+    <script>
+  // Rechtsklick deaktivieren
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  });
+
+  // Textauswahl deaktivieren
+  document.addEventListener('selectstart', function (e) {
+    e.preventDefault();
+  });
+
+  // Kopieren deaktivieren
+  document.addEventListener('copy', function (e) {
+    e.preventDefault();
+  });
+ </script>
+
 </body>
 </html>
