@@ -517,3 +517,15 @@ transform: translateY(1px);
   line-height: 1.5;
 }
 
+.stars {
+  display: flex;
+  gap: 4px;
+  font-size: 1rem;
+  color: #7800d2;
+}
+
+.feedback-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
