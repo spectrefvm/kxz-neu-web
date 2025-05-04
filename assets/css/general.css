@@ -98,3 +98,12 @@ path, line{
         width: 100%;
     }
 }
+
+
+
+
+body {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;     /* IE 10+ */
+}
