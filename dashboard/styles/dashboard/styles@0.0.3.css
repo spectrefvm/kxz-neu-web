@@ -1118,3 +1118,9 @@ body::before {
   animation: float 3s ease-in-out infinite;
   display: inline-block;
 }
+
+body {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;     /* IE 10+ */
+}
