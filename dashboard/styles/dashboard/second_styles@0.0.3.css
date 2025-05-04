@@ -529,3 +529,8 @@ transform: translateY(1px);
   color: var(--text-muted);
   margin-top: 10px;
 }
+
+.stars i {
+  color: #7800d2 !important;
+  text-shadow: 0 0 6px rgba(120, 0, 210, 0.5);
+}
