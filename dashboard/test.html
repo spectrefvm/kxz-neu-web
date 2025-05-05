@@ -271,19 +271,21 @@
 
   <div class="card" style="--animation-order: 4; max-width: 600px; margin: auto;">
     <div class="card-header">
-      <h2 class="card-title"><i class="fas fa-key"></i> Activation Key</h2>
+      <h2 class="card-title"><i class="fas fa-key"></i> License Key</h2>
+      <p class="card-description">Click to copy your activation key.</p>
     </div>
     <div class="card-content">
       <div class="key-box">
-        <input type="text" id="licenseKey" class="license-input" value="Example-59021-30242" readonly />
+        <div id="licenseKey" class="key-display">Example-59021-30242</div>
         <button class="btn btn-primary copy-btn" onclick="copyKey()">
-          <i class="fas fa-copy"></i>
+          <i class="fas fa-copy"></i> Copy
         </button>
       </div>
-      <p id="copySuccess" class="copy-success-text">✅ Copied to clipboard</p>
+      <p id="copySuccess" class="copy-success-text">✅ Key copied successfully!</p>
     </div>
   </div>
 </section>
+
 
     
     <!-- ADMIN PANEL -->
@@ -332,27 +334,19 @@
 </script>
 
 
-
-
 <script>
 function copyKey() {
-  const key = document.getElementById("licenseKey").value;
+  const key = document.getElementById("licenseKey").textContent.trim();
   navigator.clipboard.writeText(key).then(() => {
     const successMsg = document.getElementById("copySuccess");
     successMsg.style.display = "block";
     setTimeout(() => {
       successMsg.style.display = "none";
     }, 2000);
-  }).catch(err => {
-    alert("❌ Copy failed: " + err);
   });
 }
 </script>
 
-
-
-  
   
 </body>
 </html>
-
