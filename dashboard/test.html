@@ -51,7 +51,7 @@
 
       <div class="card" style="--animation-order: 1">
         <div class="card-header">
-          <h2 class="card-title"><i class="fas fa-user-circle"></i> Profile</h2>
+          <h2 class="card-title"><i class="fas fa-user-circle"></i> User Profile</h2>
         </div>
         <div class="card-content">
           <div class="profile-container">
@@ -60,7 +60,7 @@
               <h3 class="profile-name" id="profile-username">User</h3>
               <div class="profile-badges">
                 <div class="badge" id="userBadge">FREE</div>
-                <span class="profile-badge uid">UID: <span id="uid">2483</span></span>
+                <span class="profile-badge uid">UID: <span id="uid">2453</span></span>
               </div>
             </div>
           </div>
@@ -384,6 +384,15 @@ function copyKey() {
 </script>
 
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const randomUID = Math.floor(Math.random() * 9000) + 1000; // 4-digit UID
+    const uidElement = document.getElementById('uid');
+    if (uidElement) {
+      uidElement.textContent = randomUID;
+    }
+  });
+</script>
 
 
 
