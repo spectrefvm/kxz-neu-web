@@ -535,13 +535,37 @@ transform: translateY(1px);
   text-shadow: 0 0 6px rgba(120, 0, 210, 0.5);
 }
 
-.key-box {
+.big-key-box {
   display: flex;
-  gap: 15px;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+  align-items: stretch;
+  animation: fadeInUp 0.5s ease;
 }
-.key-box input {
-  flex: 1;
-  min-width: 200px;
+
+.big-input {
+  font-size: 1.2rem;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-radius: var(--radius-lg);
+  background: rgba(18, 18, 18, 0.8);
+  box-shadow: 0 0 10px rgba(157, 78, 221, 0.15);
+  backdrop-filter: blur(12px);
+}
+
+.big-btn {
+  font-size: 1.1rem;
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 0 10px rgba(157, 78, 221, 0.25);
+}
+
+.copy-success-text {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: var(--accent-color-light);
+  text-align: center;
+  display: none;
 }
