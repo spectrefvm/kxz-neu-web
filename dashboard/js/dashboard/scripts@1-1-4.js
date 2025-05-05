@@ -16,6 +16,28 @@ window.copyKey = function () {
   });
 };
 
+// === NAV SWITCH FUNCTION ===
+    document.addEventListener('DOMContentLoaded', function () {
+      const navItems = document.querySelectorAll('.nav-item');
+      const pageSections = document.querySelectorAll('.page-section');
+
+      navItems.forEach(item => {
+        item.addEventListener('click', function (e) {
+          e.preventDefault();
+          navItems.forEach(nav => nav.classList.remove('active'));
+          this.classList.add('active');
+          pageSections.forEach(section => section.classList.remove('active'));
+          const pageId = this.getAttribute('data-page');
+          document.getElementById(pageId).classList.add('active');
+        });
+      });
+
+      const cards = document.querySelectorAll('.card');
+      cards.forEach((card, index) => {
+        card.style.setProperty('--animation-order', index + 1);
+      });
+    });
+
 // === Toggle Feedback Show More ===
 window.toggleFeedback = function () {
   const more = document.getElementById("moreFeedback");
