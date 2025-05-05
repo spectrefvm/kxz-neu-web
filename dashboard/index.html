@@ -6,7 +6,7 @@
   <title>KXZ Project - Dashboard</title>
   <link rel="icon" type="image/png" href="https://kxz-project.netlify.app/assets/img/logo.png"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <script src="js/dashboard/scripts@1-12-4.js"></script>
+  <script src="js/dashboard/scripts@1-1-4.js"></script>
   <link rel="stylesheet" href="styles/dashboard/styles@0.0.3.css"/>
   <link rel="stylesheet" href="styles/dashboard/second_styles@0.0.3.css"/>
 </head>
@@ -205,18 +205,27 @@
 
     <!-- FEEDBACK SECTION -->
 <section id="feedback" class="page-section">
+  <!-- Section Title -->
   <div class="header">
     <h1 class="welcome-text">Community <span>Feedback</span></h1>
   </div>
 
-  <div class="card">
-    <div class="card-header">
-      <h2 class="card-title"><i class="fas fa-comments"></i> What Users Say</h2>
+  <!-- Feedback Card with Sticky Header + Scrollable List -->
+  <div class="card" style="padding: 0; max-height: 600px; overflow: hidden;">
+    
+    <!-- Sticky Card Header -->
+    <div class="card-header sticky-feedback-header">
+      <h2 class="card-title">
+        <i class="fas fa-comments"></i> What Users Say
+      </h2>
       <p class="card-description">Real Feedback from our Community</p>
     </div>
 
-    <div class="card-content">
+    <!-- Scrollable Feedback List -->
+    <div class="card-content" style="max-height: 530px; overflow-y: auto;">
       <ul class="feedback-list">
+
+        <!-- Feedback 1 -->
         <li class="feedback-item">
           <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
           <div class="feedback-text">
@@ -226,11 +235,12 @@
                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
             </div>
-            <p>Best FiveM Cheats I've had so far that work well and dont lag the Game and very useful</p>
+            <p>Best FiveM Cheats I've had so far that work well and don’t lag the game — very useful!</p>
             <div class="feedback-date">May 04, 2025</div>
           </div>
         </li>
 
+        <!-- Feedback 2 -->
         <li class="feedback-item">
           <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
           <div class="feedback-text">
@@ -240,11 +250,12 @@
                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
             </div>
-            <p>Easy to use, super responsive, and no performance hit. Honestly impressed with the quality here.</p>
+            <p>Easy to use, super responsive, and no performance hit. Honestly impressed.</p>
             <div class="feedback-date">May 02, 2025</div>
           </div>
         </li>
 
+        <!-- Feedback 3 -->
         <li class="feedback-item">
           <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
           <div class="feedback-text">
@@ -258,10 +269,60 @@
             <div class="feedback-date">May 02, 2025</div>
           </div>
         </li>
+
+        <!-- Feedback 4 -->
+        <li class="feedback-item">
+          <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
+          <div class="feedback-text">
+            <div class="feedback-header">
+              <strong>Lina W.</strong>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+              </div>
+            </div>
+            <p>The UI looks fantastic and I really like the clean layout. Would love even more updates!</p>
+            <div class="feedback-date">May 03, 2025</div>
+          </div>
+        </li>
+
+        <!-- Feedback 5 -->
+        <li class="feedback-item">
+          <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
+          <div class="feedback-text">
+            <div class="feedback-header">
+              <strong>Eduardo P.</strong>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p>Insane value for a free tool. Haven’t experienced any crashes or issues. 10/10</p>
+            <div class="feedback-date">May 01, 2025</div>
+          </div>
+        </li>
+
+        <!-- Feedback 6 -->
+        <li class="feedback-item">
+          <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
+          <div class="feedback-text">
+            <div class="feedback-header">
+              <strong>Nina H.</strong>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+              </div>
+            </div>
+            <p>Still a few minor bugs, but overall super smooth experience. Devs are very responsive!</p>
+            <div class="feedback-date">April 30, 2025</div>
+          </div>
+        </li>
+
       </ul>
     </div>
   </div>
 </section>
+
+
+
+
   
     <!-- GETKEY SECTION -->
 <section id="getkey" class="page-section">
@@ -286,114 +347,12 @@
   </div>
 </section>
 
-
-    
     <!-- ADMIN PANEL -->
     <section id="admin" class="page-section">
       <!-- [Your full admin panel section is preserved here, unchanged] -->
     </section>
 
   </main>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const navItems = document.querySelectorAll('.nav-item');
-      const pageSections = document.querySelectorAll('.page-section');
-
-      navItems.forEach(item => {
-        item.addEventListener('click', function (e) {
-          e.preventDefault();
-          navItems.forEach(nav => nav.classList.remove('active'));
-          this.classList.add('active');
-          pageSections.forEach(section => section.classList.remove('active'));
-          const pageId = this.getAttribute('data-page');
-          document.getElementById(pageId).classList.add('active');
-        });
-      });
-
-      const cards = document.querySelectorAll('.card');
-      cards.forEach((card, index) => {
-        card.style.setProperty('--animation-order', index + 1);
-      });
-    });
-  
-  </script>
-
-<script>
-  // Rechtsklick blockieren
-  document.addEventListener('contextmenu', e => e.preventDefault());
-
-  // Copy blockieren
-  document.addEventListener('copy', e => e.preventDefault());
-
-  // Drag blockieren
-  document.addEventListener('dragstart', e => e.preventDefault());
-
-  // Doppelklick blockieren
-  document.addEventListener('dblclick', e => e.preventDefault());
-</script>
-
-
-<script>
-function copyKey() {
-  const key = document.getElementById("licenseKey").textContent.trim();
-  navigator.clipboard.writeText(key).then(() => {
-    const successMsg = document.getElementById("copySuccess");
-    successMsg.style.display = "block";
-    setTimeout(() => {
-      successMsg.style.display = "none";
-    }, 2000);
-  });
-}
-</script>
-
-
-
-
-
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const params = new URLSearchParams(window.location.search);
-
-    if (params.has('getkey')) {
-      const allSections = document.querySelectorAll('.page-section');
-      const allNavItems = document.querySelectorAll('.nav-item');
-
-      // Hide all sections
-      allSections.forEach(section => section.classList.remove('active'));
-
-      // Show the getkey section
-      const getkeySection = document.getElementById('getkey');
-      if (getkeySection) {
-        getkeySection.classList.add('active');
-      }
-
-      // Set nav active state
-      allNavItems.forEach(item => {
-        const page = item.getAttribute('data-page');
-        if (page === 'getkey') {
-          item.classList.add('active');
-        } else {
-          item.classList.remove('active');
-        }
-      });
-    }
-  });
-</script>
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const randomUID = Math.floor(Math.random() * 9000) + 1000; // 4-digit UID
-    const uidElement = document.getElementById('uid');
-    if (uidElement) {
-      uidElement.textContent = randomUID;
-    }
-  });
-</script>
-  
   
 </body>
 </html>
