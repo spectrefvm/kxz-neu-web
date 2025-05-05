@@ -263,27 +263,30 @@
   </div>
 </section>
   
-
+    <!-- GETKEY SECTION -->
 <section id="getkey" class="page-section">
   <div class="header">
-    <h1 class="welcome-text">Your <span>Access Key</span></h1>
+    <h1 class="welcome-text">Get <span>Access Key</span></h1>
   </div>
 
-  <div class="card" style="--animation-order: 4; max-width: 600px; margin: auto;">
+  <div class="card" style="--animation-order: 4; max-width: 700px; margin: auto;">
     <div class="card-header">
-      <h2 class="card-title"><i class="fas fa-key"></i> Activation Key</h2>
+      <h2 class="card-title"><i class="fas fa-key"></i> Your License Key</h2>
+      <p class="card-description">Use this key to activate your software.</p>
     </div>
-    <div class="card-content">
-      <div class="key-box">
-        <input type="text" id="licenseKey" class="license-input" value="Example-59021-30242" readonly />
+    <div class="card-content key-card-content">
+      <div class="user-avatar neon-avatar"><i class="fas fa-key"></i></div>
+      <div class="key-content">
+        <div class="key-value" id="licenseKey">Example-59021-30242</div>
         <button class="btn btn-primary copy-btn" onclick="copyKey()">
-          <i class="fas fa-copy"></i>
+          <i class="fas fa-copy"></i> Copy Key
         </button>
+        <p id="copySuccess" class="copy-success-text">✅ Copied to clipboard</p>
       </div>
-      <p id="copySuccess" class="copy-success-text">✅ Copied to clipboard</p>
     </div>
   </div>
 </section>
+
 
 
 
