@@ -534,3 +534,14 @@ transform: translateY(1px);
   color: #7800d2 !important;
   text-shadow: 0 0 6px rgba(120, 0, 210, 0.5);
 }
+
+.key-box {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.key-box input {
+  flex: 1;
+  min-width: 200px;
+}
