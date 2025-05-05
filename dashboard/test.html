@@ -183,43 +183,49 @@
 
 <!-- SHOWCASE SECTION -->
 <section id="showcase" class="page-section">
+  <!-- Section Title -->
   <div class="header">
     <h1 class="welcome-text">YouTube <span>Showcase</span></h1>
   </div>
 
-  <div class="card" style="--animation-order: 1; max-width: 1920px; margin: auto;">
-    <div class="card-header">
+  <!-- Showcase Container (scrollable) -->
+  <div class="card" style="padding: 0; max-height: 600px; overflow: hidden;">
+    
+    <!-- Sticky Header -->
+    <div class="card-header sticky-feedback-header">
       <h2 class="card-title"><i class="fab fa-youtube"></i> Featured Videos</h2>
-      <p class="card-description">Watch our latest YouTube content directly from the dashboard</p>
+      <p class="card-description">Watch our latest videos from the community</p>
     </div>
 
-    <div class="card-content" style="display: flex; justify-content: space-between; gap: 20px;">
+    <!-- Scrollable Video List -->
+    <div class="card-content" style="max-height: 530px; overflow-y: auto; display: flex; flex-direction: column; gap: 20px; padding: 20px;">
+      
       <!-- Video 1 -->
-      <div style="width: 960px; height: 540px; border-radius: 12px; overflow: hidden; position: relative;">
+      <div style="position: relative; padding-top: 56.25%; height: 0; border-radius: 12px; overflow: hidden;">
         <iframe 
           src="https://www.youtube.com/embed/lD-C9xFwtq8" 
-          title="YouTube video 1" 
-          width="960" height="540"
-          frameborder="0" 
+          title="Video 1"
+          frameborder="0"
           allowfullscreen 
-          style="border: none;">
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
         </iframe>
       </div>
 
       <!-- Video 2 -->
-      <div style="width: 960px; height: 540px; border-radius: 12px; overflow: hidden; position: relative;">
+      <div style="position: relative; padding-top: 56.25%; height: 0; border-radius: 12px; overflow: hidden;">
         <iframe 
           src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-          title="YouTube video 2" 
-          width="960" height="540"
-          frameborder="0" 
+          title="Video 2"
+          frameborder="0"
           allowfullscreen 
-          style="border: none;">
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
         </iframe>
       </div>
+
     </div>
   </div>
 </section>
+
 
 
 
