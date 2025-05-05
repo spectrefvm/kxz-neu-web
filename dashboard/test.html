@@ -21,8 +21,11 @@
       <a href="#" class="nav-item" data-page="showcase" data-tooltip="Showcase">
         <i class="fas fa-tv"></i>
       </a>
-      <a href="#" class="nav-item" data-page="feedback" data-tooltip="FeedBack">
+      <a href="#" class="nav-item" data-page="feedback" data-tooltip="Feedback">
         <i class="fas fa-star"></i>
+      </a>
+      <a href="#" class="nav-item" data-page="getkey" data-tooltip="GetKey">
+        <i class="fas fa-key"></i>
       </a>
       <a href="#" class="nav-item" data-page="settings" data-tooltip="Account Settings">
         <i class="fas fa-cog"></i>
@@ -261,6 +264,33 @@
 </section>
   
 
+    <!-- GET KEY SECTION -->
+<section id="getkey" class="page-section">
+  <div class="header">
+    <h1 class="welcome-text">Get <span>Access Key</span></h1>
+  </div>
+
+  <div class="card" style="--animation-order: 4; max-width: 600px; margin: auto;">
+    <div class="card-header">
+      <h2 class="card-title"><i class="fas fa-key"></i> Access Key</h2>
+      <p class="card-description">Click the button to copy your access key</p>
+    </div>
+    <div class="card-content">
+      <div class="key-box">
+        <input type="text" id="licenseKey" class="form-input" value="Example-59021-30242" readonly />
+        <button class="btn btn-primary" onclick="copyKey()">
+          <i class="fas fa-copy"></i> Copy Key
+        </button>
+      </div>
+      <p id="copySuccess" style="color: var(--accent-color-light); margin-top: 15px; display: none;">
+        ✅ Key copied successfully!
+      </p>
+    </div>
+  </div>
+</section>
+
+
+    
     <!-- ADMIN PANEL -->
     <section id="admin" class="page-section">
       <!-- [Your full admin panel section is preserved here, unchanged] -->
@@ -304,6 +334,29 @@
 
   // Doppelklick blockieren
   document.addEventListener('dblclick', e => e.preventDefault());
+
+
+
+
+
+
+function copyKey() {
+  const keyInput = document.getElementById('licenseKey');
+  keyInput.select();
+  keyInput.setSelectionRange(0, 99999);
+  document.execCommand('copy');
+
+  const successMsg = document.getElementById('copySuccess');
+  successMsg.style.display = 'block';
+  setTimeout(() => {
+    successMsg.style.display = 'none';
+  }, 2000);
+}
+
+
+
+
+  
 </script>
 
   
