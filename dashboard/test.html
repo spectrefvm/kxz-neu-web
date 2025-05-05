@@ -264,30 +264,29 @@
 </section>
   
 
-    <!-- GET KEY SECTION -->
+<!-- GET KEY SECTION -->
 <section id="getkey" class="page-section">
   <div class="header">
-    <h1 class="welcome-text">Get <span>Access Key</span></h1>
+    <h1 class="welcome-text">Your <span>Access Key</span></h1>
   </div>
 
-  <div class="card" style="--animation-order: 4; max-width: 600px; margin: auto;">
+  <div class="card" style="--animation-order: 4; max-width: 700px; margin: auto;">
     <div class="card-header">
-      <h2 class="card-title"><i class="fas fa-key"></i> Access Key</h2>
-      <p class="card-description">Click the button to copy your access key</p>
+      <h2 class="card-title"><i class="fas fa-key"></i> License Key</h2>
+      <p class="card-description">Copy your personal access key to activate the software.</p>
     </div>
     <div class="card-content">
-      <div class="key-box">
-        <input type="text" id="licenseKey" class="form-input" value="Example-59021-30242" readonly />
-        <button class="btn btn-primary" onclick="copyKey()">
+      <div class="key-box big-key-box">
+        <input type="text" id="licenseKey" class="form-input big-input" value="Example-59021-30242" readonly />
+        <button class="btn btn-primary big-btn" onclick="copyKey()">
           <i class="fas fa-copy"></i> Copy Key
         </button>
       </div>
-      <p id="copySuccess" style="color: var(--accent-color-light); margin-top: 15px; display: none;">
-        ✅ Key copied successfully!
-      </p>
+      <p id="copySuccess" class="copy-success-text">✅ Key copied successfully!</p>
     </div>
   </div>
 </section>
+
 
 
     
@@ -334,12 +333,12 @@
 
   // Doppelklick blockieren
   document.addEventListener('dblclick', e => e.preventDefault());
+</script>
 
 
 
 
-
-
+<script>
 function copyKey() {
   const keyInput = document.getElementById('licenseKey');
   keyInput.select();
@@ -352,13 +351,10 @@ function copyKey() {
     successMsg.style.display = 'none';
   }, 2000);
 }
-
-
+</script>
 
 
   
-</script>
-
   
 </body>
 </html>
