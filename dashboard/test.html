@@ -270,22 +270,23 @@
     <h1 class="welcome-text">Your <span>Access Key</span></h1>
   </div>
 
-  <div class="card" style="--animation-order: 4; max-width: 700px; margin: auto;">
+  <div class="card" style="--animation-order: 4; max-width: 680px; margin: auto;">
     <div class="card-header">
       <h2 class="card-title"><i class="fas fa-key"></i> License Key</h2>
-      <p class="card-description">Copy your personal access key to activate the software.</p>
+      <p class="card-description">Use this key to activate Pulsa. Keep it safe.</p>
     </div>
     <div class="card-content">
-      <div class="key-box big-key-box">
-        <input type="text" id="licenseKey" class="form-input big-input" value="Example-59021-30242" readonly />
-        <button class="btn btn-primary big-btn" onclick="copyKey()">
-          <i class="fas fa-copy"></i> Copy Key
+      <div class="license-key-wrapper">
+        <input type="text" id="licenseKey" class="form-input license-input" value="Example-59021-30242" readonly />
+        <button class="btn btn-primary copy-btn" onclick="copyKey()">
+          <i class="fas fa-copy"></i> Copy
         </button>
       </div>
       <p id="copySuccess" class="copy-success-text">✅ Key copied successfully!</p>
     </div>
   </div>
 </section>
+
 
 
 
