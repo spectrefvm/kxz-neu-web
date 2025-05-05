@@ -21,6 +21,12 @@
       <a href="#" class="nav-item" data-page="showcase" data-tooltip="Showcase">
         <i class="fas fa-tv"></i>
       </a>
+      <a href="#" class="nav-item" data-page="feedback" data-tooltip="Feedback">
+        <i class="fas fa-star"></i>
+      </a>
+      <a href="#" class="nav-item" data-page="getkey" data-tooltip="GetKey">
+        <i class="fas fa-key"></i>
+      </a>
       <a href="#" class="nav-item" data-page="settings" data-tooltip="Account Settings">
         <i class="fas fa-cog"></i>
       </a>
@@ -37,7 +43,7 @@
 
   <main class="main-content">
 
-    <!-- DASHBOARD -->
+<!-- DASHBOARD -->
     <section id="dashboard" class="page-section active">
       <div class="header">
         <h1 class="welcome-text">Welcome, <span id="username">User</span></h1>
@@ -45,7 +51,7 @@
 
       <div class="card" style="--animation-order: 1">
         <div class="card-header">
-          <h2 class="card-title"><i class="fas fa-user-circle"></i> Profile</h2>
+          <h2 class="card-title"><i class="fas fa-user-circle"></i> User Profile</h2>
         </div>
         <div class="card-content">
           <div class="profile-container">
@@ -54,7 +60,7 @@
               <h3 class="profile-name" id="profile-username">User</h3>
               <div class="profile-badges">
                 <div class="badge" id="userBadge">FREE</div>
-                <span class="profile-badge uid">UID: <span id="uid">2483</span></span>
+                <span class="profile-badge uid">UID: <span id="uid">2453</span></span>
               </div>
             </div>
           </div>
@@ -72,10 +78,10 @@
               <h3 class="download-title"><i class="fas fa-gamepad"></i> KXZ PROJECT - FREE [FIVEM]</h3>
               <p class="download-version"><i class="fas fa-code-branch"></i> Version: 1.4.02 (Last update: Today)</p>
             </div>
-            <div class="download-btn-container">
-              <button class="download-btn" onclick="window.location.href='https://direct-link.net/1069471/kxz-free'">
-                <i class="fas fa-download"></i> Download Now
-              </button>
+             <div class="download-btn-container">
+             <button class="download-btn" onclick="window.open('https://direct-link.net/1069471/kxz-free', '_blank')">
+             <i class="fas fa-download"></i> Download Now
+             </button>
             </div>
           </div>
           <div class="separator"></div>
@@ -197,7 +203,91 @@
   </div>
 </section>
 
+    <!-- FEEDBACK SECTION -->
+<section id="feedback" class="page-section">
+  <div class="header">
+    <h1 class="welcome-text">Community <span>Feedback</span></h1>
+  </div>
 
+  <div class="card">
+    <div class="card-header">
+      <h2 class="card-title"><i class="fas fa-comments"></i> What Users Say</h2>
+      <p class="card-description">Real Feedback from our Community</p>
+    </div>
+
+    <div class="card-content">
+      <ul class="feedback-list">
+        <li class="feedback-item">
+          <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
+          <div class="feedback-text">
+            <div class="feedback-header">
+              <strong>John D.</strong>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p>Best FiveM Cheats I've had so far that work well and dont lag the Game and very useful</p>
+            <div class="feedback-date">May 04, 2025</div>
+          </div>
+        </li>
+
+        <li class="feedback-item">
+          <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
+          <div class="feedback-text">
+            <div class="feedback-header">
+              <strong>Alice M.</strong>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p>Easy to use, super responsive, and no performance hit. Honestly impressed with the quality here.</p>
+            <div class="feedback-date">May 02, 2025</div>
+          </div>
+        </li>
+
+        <li class="feedback-item">
+          <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
+          <div class="feedback-text">
+            <div class="feedback-header">
+              <strong>Marcus T.</strong>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+              </div>
+            </div>
+            <p>Really clean interface, runs smooth as hell — no lag at all. Big respect to the devs.</p>
+            <div class="feedback-date">May 02, 2025</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+  
+    <!-- GETKEY SECTION -->
+<section id="getkey" class="page-section">
+  <div class="header">
+    <h1 class="welcome-text">Get <span>License Key</span></h1>
+  </div>
+
+  <div class="card" style="--animation-order: 4; max-width: 600px; margin: auto;">
+    <div class="card-header">
+      <h2 class="card-title"><i class="fas fa-key"></i> License Key</h2>
+      <p class="card-description">Click to Copy your Free License Key.</p>
+    </div>
+    <div class="card-content">
+      <div class="key-box">
+        <div id="licenseKey" class="key-display">KXZ-Free</div>
+        <button class="btn btn-primary copy-btn" onclick="copyKey()">
+          <i class="fas fa-copy"></i> Copy
+        </button>
+      </div>
+      <p id="copySuccess" class="copy-success-text">Successfully copied the Key!</p>
+    </div>
+  </div>
+</section>
+
+
+    
     <!-- ADMIN PANEL -->
     <section id="admin" class="page-section">
       <!-- [Your full admin panel section is preserved here, unchanged] -->
@@ -226,6 +316,89 @@
         card.style.setProperty('--animation-order', index + 1);
       });
     });
+  
   </script>
+
+<script>
+  // Rechtsklick blockieren
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
+  // Copy blockieren
+  document.addEventListener('copy', e => e.preventDefault());
+
+  // Drag blockieren
+  document.addEventListener('dragstart', e => e.preventDefault());
+
+  // Doppelklick blockieren
+  document.addEventListener('dblclick', e => e.preventDefault());
+</script>
+
+
+<script>
+function copyKey() {
+  const key = document.getElementById("licenseKey").textContent.trim();
+  navigator.clipboard.writeText(key).then(() => {
+    const successMsg = document.getElementById("copySuccess");
+    successMsg.style.display = "block";
+    setTimeout(() => {
+      successMsg.style.display = "none";
+    }, 2000);
+  });
+}
+</script>
+
+
+
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.has('getkey')) {
+      const allSections = document.querySelectorAll('.page-section');
+      const allNavItems = document.querySelectorAll('.nav-item');
+
+      // Hide all sections
+      allSections.forEach(section => section.classList.remove('active'));
+
+      // Show the getkey section
+      const getkeySection = document.getElementById('getkey');
+      if (getkeySection) {
+        getkeySection.classList.add('active');
+      }
+
+      // Set nav active state
+      allNavItems.forEach(item => {
+        const page = item.getAttribute('data-page');
+        if (page === 'getkey') {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+    }
+  });
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const randomUID = Math.floor(Math.random() * 9000) + 1000; // 4-digit UID
+    const uidElement = document.getElementById('uid');
+    if (uidElement) {
+      uidElement.textContent = randomUID;
+    }
+  });
+</script>
+
+
+
+
+
+  
+  
 </body>
 </html>
