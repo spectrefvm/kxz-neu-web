@@ -16,6 +16,20 @@ window.copyKey = function () {
   });
 };
 
+// === FEEDBACK SHI ===
+  const feedbacks = document.querySelectorAll('.feedback-card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  feedbacks.forEach(card => observer.observe(card));
+
 // === NAV SWITCH FUNCTION ===
     document.addEventListener('DOMContentLoaded', function () {
       const navItems = document.querySelectorAll('.nav-item');
