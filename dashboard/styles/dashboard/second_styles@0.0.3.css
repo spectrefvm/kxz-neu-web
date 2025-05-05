@@ -535,6 +535,74 @@ transform: translateY(1px);
   text-shadow: 0 0 6px rgba(120, 0, 210, 0.5);
 }
 
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.feedback-card {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  padding: 24px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 0.8s ease;
+  color: white;
+}
+
+.feedback-card .stars {
+  color: #d946ef;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.feedback-card .date {
+  font-size: 0.8rem;
+  color: #a1a1aa;
+  margin-top: 10px;
+  display: block;
+}
+
+/* Animations */
+.feedback-card.left.visible {
+  transform: translateX(0);
+  opacity: 1;
+  animation: slideInLeft 0.6s ease forwards;
+}
+
+.feedback-card.right.visible {
+  transform: translateX(0);
+  opacity: 1;
+  animation: slideInRight 0.6s ease forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
 .key-box {
   display: flex;
   gap: 12px;
