@@ -347,6 +347,25 @@ function copyKey() {
 }
 </script>
 
+  <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.has('feedback')) {
+      const feedbackSection = document.getElementById('feedback');
+      if (feedbackSection) {
+        feedbackSection.scrollIntoView({ behavior: 'smooth' });
+        // Optional: Add a little highlight effect
+        feedbackSection.style.transition = 'box-shadow 0.5s';
+        feedbackSection.style.boxShadow = '0 0 20px rgba(0, 255, 0, 0.5)';
+        setTimeout(() => {
+          feedbackSection.style.boxShadow = 'none';
+        }, 2000);
+      }
+    }
+  });
+</script>
+
+
   
 </body>
 </html>
