@@ -209,16 +209,15 @@
     <h1 class="welcome-text">Community <span>Feedback</span></h1>
   </div>
 
-  <div class="card" style="max-height: 600px; overflow-y: auto;">
+  <div class="card">
     <div class="card-header">
       <h2 class="card-title"><i class="fas fa-comments"></i> What Users Say</h2>
       <p class="card-description">Real Feedback from our Community</p>
     </div>
 
     <div class="card-content">
-      <ul class="feedback-list">
-
-        <!-- Original Feedback 1 -->
+      <ul class="feedback-list" id="feedbackList">
+        <!-- Always visible -->
         <li class="feedback-item">
           <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
           <div class="feedback-text">
@@ -228,12 +227,11 @@
                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
             </div>
-            <p>Best FiveM Cheats I've had so far that work well and dont lag the Game and very useful</p>
+            <p>Best FiveM Cheats I've had so far that work well and don’t lag the game — very useful!</p>
             <div class="feedback-date">May 04, 2025</div>
           </div>
         </li>
 
-        <!-- Original Feedback 2 -->
         <li class="feedback-item">
           <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
           <div class="feedback-text">
@@ -243,12 +241,11 @@
                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
             </div>
-            <p>Easy to use, super responsive, and no performance hit. Honestly impressed with the quality here.</p>
+            <p>Easy to use, super responsive, and no performance hit. Honestly impressed.</p>
             <div class="feedback-date">May 02, 2025</div>
           </div>
         </li>
 
-        <!-- Original Feedback 3 -->
         <li class="feedback-item">
           <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
           <div class="feedback-text">
@@ -258,60 +255,64 @@
                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
               </div>
             </div>
-            <p>Really clean interface, runs smooth as hell — no lag at all. Big respect to the devs.</p>
+            <p>Really clean interface, runs smooth as hell — no lag at all. Big respect.</p>
             <div class="feedback-date">May 02, 2025</div>
           </div>
         </li>
 
-        <!-- New Feedback 4 -->
-        <li class="feedback-item">
-          <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
-          <div class="feedback-text">
-            <div class="feedback-header">
-              <strong>Lina W.</strong>
-              <div class="stars">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+        <!-- Hidden by default -->
+        <div id="moreFeedback" style="display: none;">
+          <li class="feedback-item">
+            <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
+            <div class="feedback-text">
+              <div class="feedback-header">
+                <strong>Lina W.</strong>
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                </div>
               </div>
+              <p>UI looks great and the layout is clean. Can’t wait for future features.</p>
+              <div class="feedback-date">May 03, 2025</div>
             </div>
-            <p>The UI looks fantastic and I really like the clean layout. Would love even more updates!</p>
-            <div class="feedback-date">May 03, 2025</div>
-          </div>
-        </li>
+          </li>
 
-        <!-- New Feedback 5 -->
-        <li class="feedback-item">
-          <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
-          <div class="feedback-text">
-            <div class="feedback-header">
-              <strong>Eduardo P.</strong>
-              <div class="stars">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <li class="feedback-item">
+            <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
+            <div class="feedback-text">
+              <div class="feedback-header">
+                <strong>Eduardo P.</strong>
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
               </div>
+              <p>Insane value for a free tool. Haven’t had a single issue — solid job.</p>
+              <div class="feedback-date">May 01, 2025</div>
             </div>
-            <p>Insane value for a free tool. Haven't experienced any crashes or issues. 10/10</p>
-            <div class="feedback-date">May 01, 2025</div>
-          </div>
-        </li>
+          </li>
 
-        <!-- New Feedback 6 -->
-        <li class="feedback-item">
-          <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
-          <div class="feedback-text">
-            <div class="feedback-header">
-              <strong>Nina H.</strong>
-              <div class="stars">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+          <li class="feedback-item">
+            <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
+            <div class="feedback-text">
+              <div class="feedback-header">
+                <strong>Nina H.</strong>
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                </div>
               </div>
+              <p>Some small bugs here and there, but the experience is super smooth. Great devs.</p>
+              <div class="feedback-date">April 30, 2025</div>
             </div>
-            <p>Still a few minor bugs, but overall super smooth experience. Devs are very responsive!</p>
-            <div class="feedback-date">April 30, 2025</div>
-          </div>
-        </li>
-
+          </li>
+        </div>
       </ul>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <button class="btn btn-outline" id="toggleFeedbackBtn" onclick="toggleFeedback()">Show More</button>
+      </div>
     </div>
   </div>
 </section>
+
 
   
     <!-- GETKEY SECTION -->
@@ -445,6 +446,19 @@ function copyKey() {
   });
 </script>
 
+<script>
+  function toggleFeedback() {
+    const more = document.getElementById("moreFeedback");
+    const btn = document.getElementById("toggleFeedbackBtn");
+    if (more.style.display === "none") {
+      more.style.display = "block";
+      btn.textContent = "Show Less";
+    } else {
+      more.style.display = "none";
+      btn.textContent = "Show More";
+    }
+  }
+</script>
 
 
 
