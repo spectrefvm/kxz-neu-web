@@ -537,39 +537,40 @@ transform: translateY(1px);
 
 .key-box {
   display: flex;
-  align-items: center;
   gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.license-input {
+.key-display {
   flex: 1;
   font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-weight: bold;
+  text-align: center;
   padding: 14px 20px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   background: rgba(18, 18, 18, 0.6);
-  backdrop-filter: blur(10px);
   border: var(--glass-border);
   color: var(--text-color);
-  text-align: center;
-  user-select: text !important;
-  -webkit-user-select: text !important;
+  letter-spacing: 1px;
+  user-select: none;
+  pointer-events: none;
 }
 
 .copy-btn {
-  padding: 14px 18px;
-  border-radius: 10px;
-  font-size: 1.1rem;
+  padding: 14px 20px;
+  font-size: 1rem;
+  border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
 }
 
 .copy-success-text {
-  display: none;
-  margin-top: 15px;
-  color: var(--accent-color-light);
+  margin-top: 12px;
   font-size: 0.9rem;
+  color: var(--accent-color-light);
   text-align: center;
+  display: none;
 }
