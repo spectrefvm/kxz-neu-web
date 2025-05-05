@@ -17,18 +17,26 @@ window.copyKey = function () {
 };
 
 // === FEEDBACK SHI ===
-  const feedbacks = document.querySelectorAll('.feedback-card');
+  document.addEventListener('DOMContentLoaded', () => {
+    const feedbacks = document.querySelectorAll('.feedback-card');
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          // Optional: log to check it's working
+          console.log('Showing:', entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.25
     });
-  }, { threshold: 0.1 });
 
-  feedbacks.forEach(card => observer.observe(card));
+    feedbacks.forEach(card => {
+      observer.observe(card);
+    });
+  });
 
 // === NAV SWITCH FUNCTION ===
     document.addEventListener('DOMContentLoaded', function () {
