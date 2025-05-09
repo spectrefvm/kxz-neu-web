@@ -1,39 +1,152 @@
+/* General reset and body setup (from original purchase) */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #FFF;
+}
+
+/* Alignments and responsive design */
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+/* Purchase header area */
+.purchase__header .hero__area {
+    border-top: 1px solid #212121;
+    border-bottom: 1px solid #212121;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(25px);
+    z-index: 1;
+    height: 246px;
+    margin-top: 7px;
+    color: #FFF;
+}
+
+.purchase__header .hero__area h2 {
+    font-size: 48px;
+    padding-top: 88px;
+    position: relative;
+    z-index: 1;
+}
+
+.purchase__header .hero__img {
+    border-radius: 5px;
+    box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.44);
+    filter: blur(2px);
+}
+
+/* Purchase section styling */
 .purchase__area {
-    padding: 50px 0;
-    background-color: #121212;
+    padding: 186px 0px;
+    position: relative;
+    background-color: #1e1e1e;
+    backdrop-filter: blur(25px);
 }
 
-.single__purchase {
-    background-color: var(--card-bg);
-    margin-bottom: 30px;
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
+/* Slider and individual product layout */
+.purchase__slider .owl-nav {
+    display: flex;
+    gap: 13px;
+    justify-content: center;
+    align-items: center;
 }
 
-.product__thumb img {
-    width: 100%;
-    border-radius: 8px;
+.purchase__slider .single__purchase {
+    height: 496px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.product__desc h3 {
-    font-size: 1.5rem;
-    color: var(--text-color);
-    margin-bottom: 10px;
+.single__purchase .single__product {
+    width: 340px;
+    border-radius: 20px;
+    border: 1px solid #212121;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(25px);
+    padding: 16px;
+    transition: all .3s;
 }
 
-.product__btn {
-    background: var(--accent-color);
-    color: #fff;
-    padding: 12px 20px;
-    margin-top: 20px;
-    text-decoration: none;
-    border-radius: 8px;
+.single__purchase .single__product .product__thumb {
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    height: 164px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.single__purchase .single__product .product__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 147.023%;
+}
+
+.single__purchase .single__product .product--price {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 147.023%;
+}
+
+.single__purchase .single__product .product--price span {
+    background: linear-gradient(93deg, #FCC47F 33.56%, #E84932 63.63%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.single__purchase .single__product .product__btn {
+    margin-top: 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.03);
+    cursor: pointer;
+}
+
+.single__purchase .single__product .product__btn:hover {
+    background-color: #fff;
+}
+
+.feature__list {
+    display: flex;
+    gap: 16px;
+    padding: 48px 0px 20px 19px;
+    transition: all .5s;
+}
+
+.feature__list li {
+    font-size: 18px;
+}
+
+/* Button styling */
+.theme__btn {
+    border-radius: 13px;
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 16px 53px;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 143.523%; /* 22.964px */
+    transition: all .3s;
     display: inline-block;
-    transition: all 0.3s;
 }
 
-.product__btn:hover {
-    background: var(--accent-color-light);
-    transform: translateY(-3px);
+.theme__btn:hover {
+    background-color: #fff;
+    color: #000;
 }
