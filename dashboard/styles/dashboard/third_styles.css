@@ -1,45 +1,37 @@
-/* General reset and body setup */
+/* General Setup */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #121212; /* Dark background for contrast */
+    background-color: #121212; /* Dark background */
     color: #fff;
 }
 
-/* Header area (Purchase) */
+/* Hero Area for Purchase */
 .purchase__header .hero__area {
     border-top: 1px solid #212121;
     border-bottom: 1px solid #212121;
-    background: rgba(0, 0, 0, 0.7); /* Darkened background */
-    backdrop-filter: blur(15px); /* Subtle blur effect */
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(15px);
     height: 300px;
-    padding-top: 70px;
+    padding-top: 50px;
     text-align: center;
 }
 
 .purchase__header .hero__area h2 {
     font-size: 40px;
     font-weight: bold;
-    text-transform: uppercase;
     color: #fff;
 }
 
-/* Purchase Section (Cards and Layout) */
+/* Purchase Section */
 .purchase__area {
-    padding: 120px 20px;
-    background: #1a1a1a; /* Dark background for purchase section */
-    border-top: 1px solid #212121;
+    padding: 100px 20px;
+    background: #1a1a1a;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
-.purchase__slider .owl-stage-outer {
-    width: 100%;
-    padding-bottom: 40px;
-}
-
-/* Single Product Card Style */
 .single__purchase {
     display: flex;
     flex-wrap: wrap;
@@ -47,29 +39,32 @@ body {
     gap: 20px;
 }
 
+/* Product Cards */
 .single__product {
-    background: rgba(255, 255, 255, 0.1); /* Transparent white with backdrop blur */
-    border-radius: 10px;
-    border: 1px solid #333; /* Soft border for better contrast */
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    border-radius: 15px;
+    border: 1px solid #333;
     padding: 20px;
-    max-width: 350px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .single__product:hover {
-    transform: scale(1.05); /* Subtle hover effect */
-    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3); /* Highlight on hover */
+    transform: translateY(-5px); /* Slight elevation on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
+/* Product Image */
 .product__thumb {
-    background: #222; /* Dark background for the product image */
+    background: #222;
+    height: 200px;
+    margin-bottom: 20px;
     border-radius: 10px;
-    height: 250px;
-    margin-bottom: 15px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .product__thumb img {
@@ -78,74 +73,61 @@ body {
     object-fit: contain;
 }
 
+/* Product Title */
 .product__title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: #fff;
     margin-bottom: 10px;
+    text-transform: capitalize;
 }
 
+/* Pricing */
 .product--price {
-    font-size: 20px;
-    color: #E84932; /* Highlighted price color */
+    font-size: 24px;
+    color: #FCC47F; /* Accent color */
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
+/* Button Styling */
 .product__btn {
-    padding: 12px 25px;
-    border: none;
+    padding: 14px 30px;
     background: linear-gradient(90deg, #E84932, #FCC47F);
-    border-radius: 10px;
+    border-radius: 8px;
     color: #fff;
     font-weight: 700;
     text-transform: uppercase;
+    transition: background-color 0.3s ease;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    margin: 10px 0;
+    width: 100%;
 }
 
 .product__btn:hover {
-    background: #FCC47F;
-    color: #000;
-    transform: scale(1.05); /* Hover effect for buttons */
+    background: linear-gradient(90deg, #FCC47F, #E84932);
 }
 
-/* Feature List Styling */
-.feature__list {
+/* Payment Options */
+.payment__options {
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px 0;
+    justify-content: space-between;
+    gap: 15px;
 }
 
-.feature__list li {
-    font-size: 16px;
-    font-weight: 400;
-    color: #ccc;
-    display: flex;
-    align-items: center;
-}
-
-.feature__list li::before {
-    content: '\2022'; /* Custom bullet */
-    margin-right: 10px;
-    color: #FCC47F; /* Accent color */
-}
-
-/* Button Style */
-.theme__btn {
-    padding: 12px 30px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
+.payment__options button {
+    padding: 12px 0;
+    background-color: #222;
+    border: 1px solid #555;
     color: #fff;
-    font-weight: 700;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    border-radius: 8px;
+    width: 45%;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.theme__btn:hover {
+.payment__options button:hover {
     background-color: #FCC47F;
     color: #000;
-    transform: scale(1.05); /* Slightly grow on hover */
 }
