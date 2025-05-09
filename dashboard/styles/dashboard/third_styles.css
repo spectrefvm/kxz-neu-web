@@ -1,0 +1,39 @@
+.purchase__area {
+    padding: 50px 0;
+    background-color: #121212;
+}
+
+.single__purchase {
+    background-color: var(--card-bg);
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.product__thumb img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product__desc h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.product__btn {
+    background: var(--accent-color);
+    color: #fff;
+    padding: 12px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.product__btn:hover {
+    background: var(--accent-color-light);
+    transform: translateY(-3px);
+}
