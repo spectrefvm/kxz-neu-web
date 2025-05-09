@@ -1,152 +1,151 @@
-/* General reset and body setup (from original purchase) */
+/* General reset and body setup */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    color: #FFF;
+    background-color: #121212; /* Dark background for contrast */
+    color: #fff;
 }
 
-/* Alignments and responsive design */
-.alignleft {
-    float: left;
-    margin-right: 15px;
-}
-
-.alignright {
-    float: right;
-    margin-left: 15px;
-}
-
-.aligncenter {
-    display: block;
-    margin: 0 auto 15px;
-}
-
-.section-padding {
-    padding: 80px 0;
-}
-
-/* Purchase header area */
+/* Header area (Purchase) */
 .purchase__header .hero__area {
     border-top: 1px solid #212121;
     border-bottom: 1px solid #212121;
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(25px);
-    z-index: 1;
-    height: 246px;
-    margin-top: 7px;
-    color: #FFF;
+    background: rgba(0, 0, 0, 0.7); /* Darkened background */
+    backdrop-filter: blur(15px); /* Subtle blur effect */
+    height: 300px;
+    padding-top: 70px;
+    text-align: center;
 }
 
 .purchase__header .hero__area h2 {
-    font-size: 48px;
-    padding-top: 88px;
-    position: relative;
-    z-index: 1;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
 }
 
-.purchase__header .hero__img {
-    border-radius: 5px;
-    box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.44);
-    filter: blur(2px);
-}
-
-/* Purchase section styling */
+/* Purchase Section (Cards and Layout) */
 .purchase__area {
-    padding: 186px 0px;
-    position: relative;
-    background-color: #1e1e1e;
-    backdrop-filter: blur(25px);
-}
-
-/* Slider and individual product layout */
-.purchase__slider .owl-nav {
+    padding: 120px 20px;
+    background: #1a1a1a; /* Dark background for purchase section */
+    border-top: 1px solid #212121;
     display: flex;
-    gap: 13px;
-    justify-content: center;
-    align-items: center;
-}
-
-.purchase__slider .single__purchase {
-    height: 496px;
-    display: flex;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
-.single__purchase .single__product {
-    width: 340px;
-    border-radius: 20px;
-    border: 1px solid #212121;
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(25px);
-    padding: 16px;
-    transition: all .3s;
+.purchase__slider .owl-stage-outer {
+    width: 100%;
+    padding-bottom: 40px;
 }
 
-.single__purchase .single__product .product__thumb {
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.05);
-    height: 164px;
-    position: relative;
-    margin-bottom: 25px;
+/* Single Product Card Style */
+.single__purchase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.single__purchase .single__product .product__title {
+.single__product {
+    background: rgba(255, 255, 255, 0.1); /* Transparent white with backdrop blur */
+    border-radius: 10px;
+    border: 1px solid #333; /* Soft border for better contrast */
+    padding: 20px;
+    max-width: 350px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.single__product:hover {
+    transform: scale(1.05); /* Subtle hover effect */
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3); /* Highlight on hover */
+}
+
+.product__thumb {
+    background: #222; /* Dark background for the product image */
+    border-radius: 10px;
+    height: 250px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product__thumb img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.product__title {
     font-size: 18px;
     font-weight: 600;
-    line-height: 147.023%;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
-.single__purchase .single__product .product--price {
-    color: #FFF;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 147.023%;
+.product--price {
+    font-size: 20px;
+    color: #E84932; /* Highlighted price color */
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
-.single__purchase .single__product .product--price span {
-    background: linear-gradient(93deg, #FCC47F 33.56%, #E84932 63.63%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.single__purchase .single__product .product__btn {
-    margin-top: 15px;
+.product__btn {
+    padding: 12px 25px;
+    border: none;
+    background: linear-gradient(90deg, #E84932, #FCC47F);
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.03);
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
     cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.single__purchase .single__product .product__btn:hover {
-    background-color: #fff;
+.product__btn:hover {
+    background: #FCC47F;
+    color: #000;
+    transform: scale(1.05); /* Hover effect for buttons */
 }
 
+/* Feature List Styling */
 .feature__list {
     display: flex;
-    gap: 16px;
-    padding: 48px 0px 20px 19px;
-    transition: all .5s;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
 }
 
 .feature__list li {
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ccc;
+    display: flex;
+    align-items: center;
 }
 
-/* Button styling */
+.feature__list li::before {
+    content: '\2022'; /* Custom bullet */
+    margin-right: 10px;
+    color: #FCC47F; /* Accent color */
+}
+
+/* Button Style */
 .theme__btn {
-    border-radius: 13px;
-    background-color: rgba(255, 255, 255, 0.12);
-    padding: 16px 53px;
-    color: #FFF;
-    font-size: 16px;
+    padding: 12px 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
     font-weight: 700;
-    line-height: 143.523%; /* 22.964px */
-    transition: all .3s;
-    display: inline-block;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
 }
 
 .theme__btn:hover {
-    background-color: #fff;
+    background-color: #FCC47F;
     color: #000;
+    transform: scale(1.05); /* Slightly grow on hover */
 }
