@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Base Styles */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #121212;
@@ -7,136 +7,116 @@ body {
     padding: 0;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+.page-section {
+    padding: 80px 0;
 }
 
-h2 {
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 10px;
+.header {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-p {
-    font-size: 16px;
-    color: #B0B0B0;
+.welcome-text {
+    font-size: 36px;
+    font-weight: bold;
 }
 
-/* Main Container */
+.welcome-text span {
+    color: #e84932;
+}
+
+/* Purchase Section */
 .purchase__area {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    padding: 50px 20px;
-    gap: 30px;
+    padding-top: 40px;
 }
 
-/* Card Styles */
-.purchase__card {
-    background: #1E1E1E;
-    border-radius: 12px;
-    width: 300px;
-    padding: 25px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
-
-.purchase__card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-}
-
-/* Image Styles */
-.purchase__card .product__thumb {
-    border-radius: 10px;
-    overflow: hidden;
-    height: 200px;
+.purchase__slider {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.single__purchase {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    width: 240px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.single__purchase:hover {
+    transform: scale(1.05);
+}
+
+.product__thumb {
+    margin-bottom: 15px;
+}
+
+.product__thumb img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product__desc {
     margin-bottom: 20px;
 }
 
-.purchase__card img {
-    max-height: 100%;
-    object-fit: cover;
-}
-
-/* Title & Pricing */
-.purchase__card .product__title {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #fff;
-}
-
-.purchase__card .product__price {
+.product__title {
     font-size: 22px;
-    color: #FCC47F;
-    font-weight: 700;
-    margin-bottom: 25px;
-}
-
-/* Description */
-.purchase__card .product__desc {
-    font-size: 16px;
-    margin-bottom: 25px;
-    color: #A5A5A5;
-}
-
-/* Button Styles */
-.purchase__card .purchase__btn {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    background-color: #E84932;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.purchase__card .purchase__btn:hover {
-    background-color: #FCC47F;
-}
-
-/* Payment Option Buttons */
-.payment__buttons {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-}
-
-.payment__buttons button {
-    width: 48%;
-    padding: 12px 0;
-    background-color: #222;
-    border: 1px solid #444;
+    font-weight: bold;
     color: #fff;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
+}
+
+.product--price {
+    font-size: 18px;
+    color: #e84932;
+    margin-bottom: 20px;
+}
+
+.product--price span {
+    font-weight: bold;
+}
+
+.feature__list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.feature__list li {
+    font-size: 14px;
+    color: #e4e4e4;
+    margin-bottom: 5px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.product__btn {
+    background-color: #e84932;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.payment__buttons button:hover {
-    background-color: #FCC47F;
-    color: #000;
+.product__btn:hover {
+    background-color: #fcc47f;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .purchase__area {
-        gap: 20px;
-    }
-
-    .purchase__card {
-        width: 100%;
-        max-width: 380px;
-    }
+.product__btn:active {
+    background-color: #e84932;
 }
