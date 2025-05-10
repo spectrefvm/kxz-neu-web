@@ -1,103 +1,67 @@
-/* General Purchase Section */
-.page-section {
-    padding: 60px 0;
-}
-
-.header {
-    margin-bottom: 40px;
-}
-
-.welcome-text {
-    font-size: 36px;
-    font-weight: 700;
-    color: #fff;
-}
-
-.welcome-text span {
-    color: #7800d2; /* Main color */
-}
-
-/* Purchase Area */
 .purchase__area {
-    padding: 0 15px;
+  padding: 60px 0;
+  background-color: #f8f8f8;
 }
 
 .purchase__slider .single__purchase {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-    border: 1px solid #333;
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: #212121;
-    transition: transform 0.3s ease;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
 .purchase__slider .single__purchase:hover {
-    transform: scale(1.05);
-}
-
-.single__product {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-    max-width: 380px;
+  transform: scale(1.05);
 }
 
 .product__thumb img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .product__desc {
-    color: #fff;
+  margin-top: 20px;
 }
 
 .product__title {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 10px;
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
 }
 
 .product--price {
-    font-size: 22px;
-    font-weight: 700;
-    color: #7800d2;
+  font-size: 24px;
+  font-weight: bold;
+  color: #7800d2;
+  margin-bottom: 20px;
 }
 
 .feature__list {
-    margin-bottom: 20px;
-    list-style: none;
-    padding-left: 0;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 .feature__list li {
-    font-size: 16px;
-    font-weight: 400;
-    color: #bbb;
+  font-size: 16px;
+  color: #333;
 }
 
 .product__btn {
-    display: block;
-    width: 100%;
-    padding: 12px 0;
-    background-color: #7800d2;
-    color: #fff;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 12px 30px;
+  margin: 10px 5px;
+  background-color: #7800d2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .product__btn:hover {
-    background-color: #5a00a6;
+  background-color: #5e00a3;
 }
