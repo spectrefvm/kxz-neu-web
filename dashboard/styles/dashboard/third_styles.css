@@ -1,42 +1,58 @@
 /* PURCHASE SECTION */
 #purchase {
   padding: 40px 20px;
-  background: #121212;
+  background: linear-gradient(135deg, #1e1e2d, #252535); /* Soft gradient for background */
   text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* subtle shadow to lift the section */
 }
 
-.header {
-  margin-bottom: 40px;
+.card {
+  background: rgba(30, 30, 50, 0.8);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid #333;
 }
 
-.welcome-text {
+.card-header {
+  margin-bottom: 20px;
+}
+
+.card-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #fff;
+  color: var(--text-color);
 }
 
-.purchase__container {
+.card-description {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+.card-content {
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 /* PRODUCT CARD */
 .purchase__card {
-  background: #1a1a1a;
+  background: rgba(24, 24, 24, 0.7);
   border-radius: 10px;
   padding: 20px;
   width: 280px;
-  box-sizing: border-box;
-  transition: transform 0.3s ease;
   text-align: center;
-  border: 1px solid #333;
+  transition: transform 0.3s ease;
+  border: 1px solid #444;
   margin-bottom: 30px;
 }
 
 .purchase__card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .product__image {
@@ -55,12 +71,12 @@
 
 .product__price {
   font-size: 1.1rem;
-  color: #9d4edd;
+  color: #7800d2; /* Accent color for price */
   margin-top: 10px;
 }
 
 .purchase-btn {
-  background: #9d4edd;
+  background: linear-gradient(135deg, #7800d2, #9d4edd);
   color: white;
   padding: 12px 20px;
   border-radius: 6px;
@@ -72,5 +88,5 @@
 }
 
 .purchase-btn:hover {
-  background: #7800d2;
+  background: #6a00b8; /* Darker shade on hover */
 }
