@@ -1,10 +1,10 @@
 /* Purchase Section */
 #purchase {
-  padding: 40px 20px;
-  background: linear-gradient(135deg, var(--dark) 0%, var(--dark-lighter) 100%);
+  padding: 50px 20px;
+  background: linear-gradient(135deg, var(--dark-lighter) 0%, var(--dark) 100%);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
-  margin-top: 60px;
+  box-shadow: var(--shadow-lg);
+  margin-top: 80px;
 }
 
 .header {
@@ -13,7 +13,7 @@
 }
 
 .welcome-text {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--text-color);
   position: relative;
@@ -46,24 +46,13 @@
   transition: var(--transition);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  background: var(--card-hover-bg);
-}
-
 .card-header {
-  padding: 20px;
+  padding: 25px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   background: var(--dark-input);
   color: var(--text-color);
-}
-
-.card-title {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .card-description {
@@ -73,7 +62,7 @@
 }
 
 .card-content {
-  padding: 20px;
+  padding: 25px;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
@@ -81,7 +70,7 @@
 
 .purchase__card {
   background: var(--card-bg);
-  border-radius: var(--radius);
+  border-radius: var(--radius-sm);
   padding: 20px;
   width: 30%;
   text-align: center;
@@ -89,6 +78,7 @@
   transition: var(--transition);
   border: var(--glass-border);
   position: relative;
+  margin-bottom: 30px;
 }
 
 .purchase__card img {
@@ -119,6 +109,7 @@
   cursor: pointer;
   border: none;
   transition: var(--transition);
+  width: 100%;
 }
 
 .purchase-btn:hover {
@@ -130,7 +121,7 @@
   outline: none;
 }
 
-/* Responsive for small screens */
+/* Responsive for smaller screens */
 @media (max-width: 768px) {
   .purchase__card {
     width: 100%;
