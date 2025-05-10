@@ -1,13 +1,25 @@
 /* Pricing Section */
 #pricing {
     padding: 80px 0;
-    background-color: #1a1a1a;
+    background: url('assets/img/background.jpg') no-repeat center center/cover;
     color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+#pricing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
 }
 
 .header .welcome-text {
     font-size: 36px;
-    color: #fff;
     font-weight: bold;
 }
 
@@ -34,12 +46,16 @@
     width: 23%;
     padding: 30px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
 .pricing__card:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px);
+    background-color: #3c3c3c;
 }
 
 .pricing__header {
@@ -91,4 +107,16 @@
 
 .pricing__btn:hover {
     background-color: #5e00a3;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .pricing__cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .pricing__card {
+        width: 100%;
+    }
 }
