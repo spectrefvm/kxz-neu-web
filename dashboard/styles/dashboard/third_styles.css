@@ -2,52 +2,41 @@
 #purchase {
   padding: 40px 20px;
   background: #121212;
-}
-
-.card {
-  background: rgba(18, 18, 18, 0.8);
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: var(--shadow);
-}
-
-.card-header {
   text-align: center;
-  margin-bottom: 20px;
 }
 
-.card-title {
-  font-size: 2rem;
+.header {
+  margin-bottom: 40px;
+}
+
+.welcome-text {
+  font-size: 2.5rem;
   font-weight: bold;
-  color: var(--text-color);
+  color: #fff;
 }
 
-.card-description {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  margin-top: 10px;
-}
-
-.card-content {
+.purchase__container {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
-/* PRODUCT CARD STYLES */
+/* PRODUCT CARD */
 .purchase__card {
-  background: rgba(24, 24, 24, 0.8);
-  border-radius: var(--radius-lg);
+  background: #1a1a1a;
+  border-radius: 10px;
   padding: 20px;
   width: 280px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #333;
+  margin-bottom: 30px;
 }
 
 .purchase__card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-10px);
 }
 
 .product__image {
@@ -59,29 +48,29 @@
 
 .product__title {
   font-size: 1.3rem;
-  color: var(--text-color);
+  font-weight: 500;
+  color: #fff;
   margin-top: 15px;
 }
 
 .product__price {
   font-size: 1.1rem;
-  color: var(--accent-color);
+  color: #9d4edd;
   margin-top: 10px;
 }
 
 .purchase-btn {
-  background: linear-gradient(135deg, var(--accent-color), var(--primary));
+  background: #9d4edd;
   color: white;
   padding: 12px 20px;
-  border-radius: var(--radius-lg);
-  font-weight: bold;
+  border-radius: 6px;
+  font-weight: 500;
   cursor: pointer;
-  margin-top: 15px;
   border: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 15px;
+  transition: background 0.3s ease;
 }
 
 .purchase-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(120, 0, 210, 0.3);
+  background: #7800d2;
 }
