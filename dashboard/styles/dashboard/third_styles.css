@@ -1,29 +1,53 @@
-/* Purchase Section Styles */
+/* PURCHASE SECTION */
 #purchase {
   padding: 40px 20px;
-  text-align: center;
   background: #121212;
 }
 
-.purchase__container {
+.card {
+  background: rgba(18, 18, 18, 0.8);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.card-description {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+.card-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
 }
 
+/* PRODUCT CARD STYLES */
 .purchase__card {
-  background: rgba(18, 18, 18, 0.7);
+  background: rgba(24, 24, 24, 0.8);
+  border-radius: var(--radius-lg);
   padding: 20px;
-  border-radius: 12px;
+  width: 280px;
   text-align: center;
-  width: 250px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .purchase__card:hover {
   transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 .product__image {
@@ -34,30 +58,30 @@
 }
 
 .product__title {
-  font-size: 1.2rem;
-  color: #fff;
+  font-size: 1.3rem;
+  color: var(--text-color);
   margin-top: 15px;
 }
 
 .product__price {
   font-size: 1.1rem;
-  color: #7800d2;
+  color: var(--accent-color);
   margin-top: 10px;
 }
 
 .purchase-btn {
-  background: linear-gradient(135deg, #7800d2, #9d4edd);
-  color: #fff;
+  background: linear-gradient(135deg, var(--accent-color), var(--primary));
+  color: white;
   padding: 12px 20px;
-  border: none;
-  border-radius: 6px;
+  border-radius: var(--radius-lg);
   font-weight: bold;
   cursor: pointer;
   margin-top: 15px;
+  border: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .purchase-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 16px rgba(120, 0, 210, 0.3);
+  box-shadow: 0 6px 16px rgba(120, 0, 210, 0.3);
 }
